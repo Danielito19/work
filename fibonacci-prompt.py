@@ -37,7 +37,7 @@
 # On commence par définir la fonction `fibonacci` comme il suit. Naturellement vous n'avez pas encore tout le bagage pour lire ce code, ne vous inquiétez pas, nous allons vous expliquer tout ça dans les prochaines semaines. Le but est uniquement de vous montrer un fonctionnement de l'interpréteur Python et de IDLE.
 
 # In[ ]:
-
+from argparse import ArgumentParser
 
 def fibonacci(n):
     "retourne le nombre de fibonacci pour l'entier n"
@@ -58,8 +58,11 @@ def fibonacci(n):
 
 # In[ ]:
 
-
-entier = int(input("Entrer un entier "))
+parser = ArgumentParser()
+parser.add_argument(dest="entier", type=int,
+                    help="entier d'entrée")
+input_args = parser.parse_args()
+entier = input_args.entier
 
 
 # On imprime le résultat :
