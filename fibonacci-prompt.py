@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/mamba/bin/python3
 # coding: utf-8
 
 # <div class="licence">
